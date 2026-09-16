@@ -2,7 +2,7 @@
   <img src="assets/mascot/pip_flight_loop.gif" alt="Pip, the courier bird" width="200">
 </p>
 
-# AI Job Search
+# Agentic AI Job Search
 
 *The job search that runs on your machine.*
 
