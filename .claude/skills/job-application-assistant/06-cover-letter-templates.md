@@ -76,7 +76,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TITLE NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{}{\Huge{[YOUR_NAME]}}{  \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} | [YOUR_PHONE] |  \urlstyle{same}\href{[YOUR_LINKEDIN_URL]}{LinkedIn}
+\namesection{}{\Huge{Shivaji Dutta}}{  \href{mailto:shivaji23.ca@gmail.com}{shivaji23.ca@gmail.com} | (226) 995-0055 |  \urlstyle{same}\href{https://www.linkedin.com/in/shivajix/}{LinkedIn}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,9 +106,13 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 \begin{flushright}
 % No trailing \\ inside \closing{} - cover.cls appends its own \\, and a
 % doubled break triggers "! LaTeX Error: There's no line here to end."
-\closing{Kind regards,}
+\closing{Best regards,}
 
-\signature{[YOUR_NAME]}
+\signature{Shivaji}
+% Sign-off uses first name only, matching both of Shivaji's real cover letters
+% (Affirm and Applied Systems/EZLynx) — see 03-writing-style.md's "Patterns
+% Observed in Past Applications". "Kind regards," above was the template
+% default; both real letters used "Best regards," instead.
 \end{flushright}
 \end{document}
 ```

@@ -39,6 +39,62 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+<!-- Added by /setup Path A from SHIVAJI-CONTEXT.md. These are stubs, not full STAR examples -
+per instruction, metrics/specifics should be pulled only from source material (CV or
+SHIVAJI-CONTEXT.md), never invented. Fill in S/T/A/R yourself before using these in an
+interview. -->
+
+### The dot-com bubble, from the inside (skill: judgment under uncertainty / resilience)
+**Source:** SHIVAJI-CONTEXT.md, "Personal Stories" and "Background" sections
+**What happened:** Joined NetMedia India (internet media startup) in 1999 as part of a 14-person core team; watched it grow to 64 on funding euphoria, then collapse back to ~15 when the bubble burst. Resigned in 2001 to pursue post-graduate study.
+**Why it matters:** Questions about handling uncertainty, reading organizational risk, or what shaped your view of startups/funding
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Building and walking away from The Circus (skill: founder resilience / hard decisions)
+**Source:** SHIVAJI-CONTEXT.md, "Key Roles" and "Personal Stories" sections
+**What happened:** Co-founded The Circus Entertainment in 2012, scaled it to 8-figure ARR and 80+ people across 4 offices in under 2 years, then left in 2019 to pivot into digital/UX — a decision described as painful, without having fully seen the financial fruits of 7 years of work.
+**Why it matters:** Questions about the hardest professional decision you've made, walking away from something you built, or founder experience
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Pivoting into digital/UX at 43 (skill: adaptability / career reinvention)
+**Source:** SHIVAJI-CONTEXT.md, "The Pivots" section
+**What happened:** After 7 years building The Circus in physical/experiential marketing, moved into UX and digital product at an age when most people double down on existing expertise instead.
+**Why it matters:** Questions about learning agility, career changes, or why you moved from marketing/experiential into product
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### The "too senior for startups, not pedigreed enough for enterprise" hiring gap (skill: self-awareness / persistence in job search)
+**Source:** SHIVAJI-CONTEXT.md, "Personal Stories" and "Imposter Syndrome Notes" sections
+**What happened:** Repeated pattern in past job searches — early-stage startups worried about cost/retention, enterprise wanted a fixed number of years of "directly relevant" experience that a non-linear path didn't provide on paper.
+**Why it matters:** Questions about handling rejection, "why haven't you found a role yet," or addressing a non-traditional path directly
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Scaling delivery under growth pressure (skill: operational scaling, metrics-driven)
+**Source:** CV (Applied Systems) and SHIVAJI-CONTEXT.md career metrics table
+**What happened:** At ALM Corp, grew managed projects from ~200 to 300+ within 15 months and led a 60+ person cross-functional team, while improving on-time delivery and marketing KPIs. Similarly at Zoodle, GTM strategy drove 8,000+ user acquisitions (4x the 2,000 target).
+**Why it matters:** Questions asking for a concrete, metrics-backed example of scaling operations or hitting an aggressive growth target
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"

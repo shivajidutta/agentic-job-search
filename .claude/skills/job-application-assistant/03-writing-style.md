@@ -108,3 +108,15 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 - Default to the language of the job posting
 - Cover letters in the posting's language should feel natural, not translated
 - Slightly warmer, more personal tone may be acceptable in some languages
+
+## Patterns Observed in Past Applications
+<!-- Extracted by /setup Path A from two real cover letters: Affirm (Sr Director, Product
+Marketing) and Applied Systems/EZLynx. Two examples is the minimum bar for a pattern per the
+setup rules - more examples will sharpen or correct these as they're added. -->
+
+- **Salutation:** "Dear Hiring Team, [Company]" (company name after a comma), not "Dear [Company] hiring team," or a named person — both real letters used this exact form.
+- **Opening paragraph:** 2-3 sentences establishing a specific, vivid observation about the company's actual problem or domain (not a generic compliment), then a pivot into why the role is relevant. Both letters closed the opening with "a natural next step" language connecting the observation to the role.
+- **Second paragraph — career narrative:** Opens with a variant of "At every stage of my career, I have [thematic summary]," then walks through 3-4 roles in an "At [Company], I [action + metric]" rhythm, most recent first, ending on the oldest/founding story (The Circus) as the capstone.
+- **No bullet lists in practice.** Both real letters are pure prose paragraphs — no bulleted achievement list, despite the template below showing one. Note this as observed practice; the template's bullet-list guidance is still the documented default for `/apply` to fall back on when prose alone can't carry the content, but prose-first is Shivaji's demonstrated preference.
+- **Sign-off:** "Best regards" followed by first name only ("Shivaji"), not full name — both letters used this.
+- **Length:** Both landed around 200-230 words of body text, comfortably under the 250-300 word budget.

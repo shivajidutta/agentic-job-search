@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Shivaji Dutta
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Shivaji Dutta, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +10,105 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
+Full detail lives in `.claude/skills/job-application-assistant/01-candidate-profile.md` (and siblings 02-07). This section is a summary for quick reference.
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Shivaji Dutta
+- **Location:** Toronto, Canada (open to remote; hybrid acceptable; no relocation)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+  | English | Professional |
+  | Hindi | Native |
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Actively building UseSaved (solo, 0-to-1 AI product) and supporting Zoodle in a fractional Product/GTM/Growth capacity. Targeting **full-time AI PM / Senior AI PM roles at tech startups** — treat "fractional" as current circumstance, not a stated preference; full-time is the goal. More senior scope (Director/VP) is welcome to surface but flagged, since it may be harder to defend in an interview.
+- **LinkedIn headline:** [TO CONFIRM — not in source material, ask rather than invent]
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+<!-- Dates are internal reference only (verification purposes) - never display graduation years
+on a rendered CV or cover letter. Confirmed 2026-09-18: age-bias avoidance takes priority over
+the ATS date-completeness guidance in 05-cv-templates.md for education entries specifically. -->
+- **Master of Design (M.Des)** *(internal: 2011-2012, do not render)* - National Institute of Fashion Technology (NIFT), New Delhi
+  - Upgrade course from a 2001-2003 Post-Graduate Diploma in Fashion Communication at the same institution
+- **Bachelor of Business Administration (Hons), Marketing** *(internal: 1995-1998, do not render)* - Apeejay School of Management, New Delhi (affiliated to Thames Valley University, London)
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+Full 13-role history (1998-present) is in `01-candidate-profile.md`. Most recent:
+- **Founder-Builder** (Jun 2026 - Present) - **UseSaved** (Remote, Toronto)
+- **Fractional Leader, Product/GTM/Growth** (Jan 2025 - Present) - **Zoodle** (Remote, India)
+- **Product Strategy, Brand & Growth** (Jan 2023 - Mar 2025) - **Inperso** (Remote, India/Australia)
+- **Associate Vice President - Growth** (Oct 2022 - Feb 2023) - **ALM Corp** (Remote, Toronto)
+- **Director - Marketing** (Apr 2021 - Sep 2022) - **ALM Corp** (Remote, Toronto)
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** 0-to-1 product strategy, GTM strategy, growth strategy, AI-assisted product development (built and shipped UseSaved solo using AI-assisted coding workflows)
+- **Secondary:** Brand/narrative positioning, CX design, cross-functional team leadership and scaling, investor/stakeholder storytelling
+- **Domain:** Consumer tech, SaaS, marketplace platforms; non-traditional path via physical experience design into digital product
+- **Software:** None tracked by default. Only add a specific tool if a posting explicitly requires it, and confirm the claim with Shivaji before including it — never infer or invent one.
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- Introduction to User Experience Design - Coursera / Georgia Institute of Technology (2018)
+- Content Strategy for Professionals - Coursera / Northwestern University (2019)
+- ISLab Pre-Accelerator Programme - Indian School of Business (ISB) & Bocconi University, Italy (2020)
+- Member, Interaction Design Foundation (IxDF) (2020)
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None on record.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- WOW Awards (won twice)
+- EEMA Award (once)
+- Gold & Silver, Best Pavilion Design - India International Trade Fair (IITF), different years
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+Full detail in `02-behavioral-profile.md`, weighted toward builder / 0-to-1 strengths per explicit instruction (not marketing-first framing):
+- **Strengths:** 0-to-1 product building (shipped UseSaved solo), founder experience (2x), growth and product-decision ownership, translating ambiguity into working product, scaling teams and ops from zero
+- **Thrives in:** ambiguous 0-to-1 environments, high autonomy, small teams with real ownership
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building AI-native products end-to-end, hands-on
+- 0-to-1: taking a problem from validation to a working product
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Tech startups (AI product, consumer tech, SaaS, marketplaces) - roles: AI PM, Senior AI PM
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Pure execution roles with no strategic/product input
+- Large enterprise/corporate environments with slow decision cycles
+- Roles that evaluate on pedigree over capability
+- Roles that silo design, marketing, and product from each other
+
+## Candidate-Specific Working Rules
+
+These are standing rules for **every** future `/apply`, `/setup --section`, or manual edit in this repo, not just the initial setup pass. Confirmed directly by Shivaji on 2026-09-18.
+
+1. **CV content, headings, and format strictly follow the source CV** (`Job Applications/Applied Systems/Shivaji Dutta.pdf`), not the shipped template's generic structure. Real structure: name + tagline + one unlabeled 2-3 sentence intro paragraph -> Employment -> Career Highlights -> Education. See the section-order override in `05-cv-templates.md`.
+2. **The CV is always exactly 2 pages. Never more.** (This is already `05-cv-templates.md`'s hard rule - reaffirmed here as non-negotiable.)
+3. **Do not add these as CV sections, even though the master profile tracks them:** Languages, Awards, Independent Projects, a separately-labeled "Professional Summary" heading. The master profile (`01-candidate-profile.md`) still records this data - the Language Gate in `04-job-evaluation.md` needs it - it just never renders on the CV itself.
+4. Target roles are **AI PM and Senior AI PM** at tech startups. More senior scope (Director/VP) can be surfaced opportunistically but should be flagged as a stretch he may not be able to defend in an interview.
+5. **Behavioral framing leads with builder / 0-to-1 / founder strengths** (growth, product strategy, product decisions) - not a marketing-first framing, even though much of the work history sits in marketing-titled roles.
+6. **Writing style is grounded in his two real cover letters** (Affirm and Applied Systems/EZLynx applications) - see the "Patterns Observed in Past Applications" section added to `03-writing-style.md`. More examples can be added later if he shares them.
+7. **Job search target: full-time preferred, remote ideal, hybrid acceptable.** Treat any mention of "fractional" work (e.g. the current Zoodle engagement) as circumstance, not a stated career preference - do not weight fractional roles higher in evaluation because of it.
+8. **GitHub link:** https://github.com/shivajidutta
+9. **Metrics discipline:** only add a metric to a CV/cover letter bullet if it is grounded in the job description being targeted or already present in source material. For interview STAR stories, source specifics from `SHIVAJI-CONTEXT.md` (in the old workspace, `D:\000-all-Claude\CVs\SHIVAJI-CONTEXT.md`) or the candidate profile - never invent a Situation/Task/Action/Result detail.
+10. **Never invent a data point that is not explicitly present in the CV or context file.** If something is missing or ambiguous, ask Shivaji directly rather than guessing or filling a gap silently. This applies everywhere in this repo, not just during setup.
+11. **Never display graduation years on a rendered CV or cover letter** (confirmed 2026-09-18, to avoid age bias). Real dates (BBA 1995-1998, M.Des 2011-2012) are kept internally in the profile files for verification only, marked "do not render."
+12. **No default software/tools list.** Add a tool only if a specific posting explicitly asks for it, and confirm with Shivaji before including it.
+13. **Reference contacts are deferred.** Do not add named references to a CV or cover letter proactively - collect them only if/when specifically requested during or after an interview process. "Available upon request" stays as the default line.
+14. **Energizing work:** fast-paced, high-autonomy. **Draining work:** babysitting mature or maintenance-mode products/features, low autonomy, slow pace. Weight job evaluation and cover-letter framing accordingly.
+
+## Continuous Feedback Loop
+
+Confirmed with Shivaji on 2026-09-18. This is the standing protocol for handling his corrections and confirmations, not just during initial setup — apply it for the life of this repo.
+
+1. **When Shivaji corrects an approach, or explicitly confirms one that worked, apply the fix immediately** — don't just note it and move on.
+2. **Log it in the most specific place, dated, with the reasoning:**
+   - A single skill file (e.g. `03-writing-style.md`, `05-cv-templates.md`) if the feedback is about one thing.
+   - The numbered list in "Candidate-Specific Working Rules" above if it cuts across multiple files or is a cross-cutting rule.
+   - Application-outcome feedback (why a posting got an interview/rejection/no response) is a **separate** loop — that already runs through `/outcome` into `04-job-evaluation.md`'s "Calibration from Past Applications" section. Don't conflate the two.
+3. **Commit the change locally** (`git commit`, never `git push`) after a confirmed feedback round, with a message describing what changed and why. Shivaji gave standing permission for local commits on 2026-09-18 — no need to ask each time. **Pushing to `origin` (his public fork) is never automatic** — that always needs an explicit, separate ask, since pushed commits would expose personal data on a public fork (see the `/setup` privacy warning).
+4. **If the rules list above gets long or self-contradictory, flag it and propose a consolidation pass** rather than letting it silently sprawl.
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

@@ -59,7 +59,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Shivaji Dutta - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -69,13 +69,13 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Shivaji}{Dutta}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Toronto, ON, Canada}{}{}
+\phone[mobile]{(226) 995-0055}
+\email{shivaji23.ca@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/shivajix/}{LinkedIn}, \href{https://github.com/shivajidutta}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -136,12 +136,11 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For AI PM / Product Leadership roles:**
+> Product Management | 0-to-1 & AI Products | 2x Founder. Currently building UseSaved, an AI-native save-and-find product, solo and hands-on with AI-assisted development workflows. 10+ years taking 0-to-1 products and businesses from discovery to market: validating problems with real users, translating user needs into clear product requirements and roadmaps, and leading cross-functional teams through go-to-market (GTM) and post-launch adoption, with high-agency ownership of outcomes, KPIs, and product ROI.
+> *[Used for: Applied Systems]* — lifted directly from the vetted CV; every factual claim here is already grounded in `01-candidate-profile.md`.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**Second template:** Skipped by design (confirmed 2026-09-18) — Shivaji is targeting AI PM / Senior AI PM specifically, not a separate growth-titled track, so `/apply`'s per-JD tailoring of the one template above should cover it. Add a second template only if a genuinely different framing angle comes up.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
@@ -154,8 +153,9 @@ Use the posting's own core term in the matching bullet's bold label when it trut
 
 ### Education
 - Always include your highest degrees
-- For senior roles, keep education brief (dates and titles only)
-- Include thesis topics when relevant to the target role
+- **Never include graduation years** (confirmed 2026-09-18, to avoid age bias) — degree name and institution only. Leave the `\cventry` date argument empty: `\cventry{}{Degree, Field}{Institution}{Location}{}{...}`.
+  - **Trade-off to be aware of:** the ATS section below documents a confirmed Workday failure to import an education entry with no date range. This is a known, accepted risk in exchange for not signaling age — do not "fix" it by adding dates back in without asking first.
+- Include thesis topics when relevant to the target role (Shivaji has none on file)
 
 #### In-progress qualifications must say so explicitly
 
@@ -359,6 +359,20 @@ Cut the lowest-total-score line first, regardless of which section it sits in.
 
 ## Recommended Section Order
 
+**Section order override — confirmed 2026-09-18, applies to every CV in this repo, replacing the generic guidance below:**
+
+Shivaji's real CV (`Job Applications/Applied Systems/Shivaji Dutta.pdf`) uses a specific 4-part structure. Match it exactly — do not add the sections the generic guidance below suggests:
+
+1. Header: name + one-line tagline (e.g. "Product Management | 0-to-1 & AI Products | 2x Founder") + one **unlabeled** 2-3 sentence intro paragraph directly under it (no "Professional Summary" heading)
+2. **Employment** (not "Professional Experience" — use this exact heading, reverse chronological)
+3. **Career Highlights** (a short bulleted callout section after Employment, pulling the single strongest, most quantified achievement from each major role)
+4. **Education**
+
+**Do not add, even though the master profile (`01-candidate-profile.md`) tracks the data:** a Skills/Core Competencies section, a Languages section, an Awards section, a Publications section, a References section, or an Independent Projects section. If a posting specifically asks for one of these (e.g. explicitly requests a skills matrix), ask before adding it rather than including it by default.
+
+<details>
+<summary>Generic guidance (superseded by the override above, kept for reference only)</summary>
+
 The section order varies by role type:
 
 **For technical / data science / ML roles:**
@@ -377,3 +391,5 @@ The section order varies by role type:
 4. Professional Experience (reverse chronological)
 5. Publications & Awards
 6. References
+
+</details>

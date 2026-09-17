@@ -60,9 +60,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** 0-to-1 product strategy, GTM strategy, growth strategy, AI-assisted product development (shipped UseSaved solo)
+**Moderate match areas:** Brand/narrative positioning, CX design, cross-functional team leadership and scaling
+**Weak match areas:** No static list by design (confirmed 2026-09-18) — score each posting honestly against what it specifically requires rather than against a pre-set gap list.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +74,11 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Product strategy, GTM/growth leadership, 0-to-1 ventures (UseSaved, eZing, Ghumyo, Happyly), founder/agency-building experience
+**Moderate:** AI product management specifically (UseSaved is the first AI-native product; most prior experience is marketing/GTM/product-strategy titled rather than PM-titled — see Target Sectors/role note below)
+**Entry-level:** [TO CONFIRM — none identified in source material]
+
+**Note on role-title matching:** Shivaji is targeting **AI PM and Senior AI PM** roles specifically (not Director/VP, even though his seniority and 2x-founder background could support that level — he'd rather target roles he can confidently defend in an interview). Match on function, not job title: most of his work history is titled "Growth," "Marketing," or "Product Strategy" rather than "Product Manager," but the underlying work (roadmap ownership, product decisions, 0-to-1 delivery) is PM-functional. Do not penalize a lack of literal "Product Manager" titles in Experience Match scoring — evaluate the work itself.
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -107,19 +109,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Land a full-time AI PM or Senior AI PM role at a tech startup — full-time preferred, remote ideal, hybrid acceptable
+- More senior scope (Director/VP) can surface opportunistically but should be flagged as a stretch to defend in an interview
+- Build toward recognized thought leadership in growth/product thinking on LinkedIn and X
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: hands-on 0-to-1 building, owning product decisions end to end, AI-native product work, fast-paced and high-autonomy environments
+- Tasks that drain: babysitting mature or maintenance-mode products/features; slow-paced, low-autonomy work
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Currently building UseSaved solo plus fractional work at Zoodle — actively job searching for full-time, not treating fractional work as the end goal
+- **Flexibility**: Remote preferred, hybrid acceptable, no relocation; comfortable working across time zones (has worked India/Canada/Australia)
+- **Professional development**: [TO CONFIRM — not yet stated; not blocking, ask later if relevant]
 
 ### 6. Salary Benchmark (Optional)
 
