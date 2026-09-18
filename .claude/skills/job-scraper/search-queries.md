@@ -2,9 +2,9 @@
 
 ## Installed portal CLIs (primary for `/scrape`)
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos stay disabled (not targeting Denmark).
+`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search`, `freehire-search`, and `builtin-search` (added 2026-09-18); Danish demos stay disabled (not targeting Denmark).
 
-**Portal gap (confirmed 2026-09-18):** Shivaji also wants builtin.com, trueup.io, indeed, handshake, glassdoor, and Google Jobs covered. None of these have a dedicated CLI yet — `/scrape` falls back to the WebSearch `site:` queries below for them. `builtin.com` and `trueup.io` are strong `/add-portal` candidates (startup/tech-focused, matches the AI-startup target) if a dedicated CLI is wanted later.
+**Portal gap (updated 2026-09-18):** Shivaji also wants trueup.io, indeed, handshake, glassdoor, and Google Jobs covered. `handshake.com` is a dead end (school-gated, no public listings). `indeed.com`/`glassdoor.com` allow crawling per robots.txt but have heavy bot-detection that likely needs a paid unlocker service - not built yet, pending a decision on whether that cost is worth it. `trueup.io` turned out to be a client-side-rendered app whose job-data API wasn't found after checking several JS bundles - needs more investigation or falls back to WebSearch. `google.com/jobs` isn't a real portal (a Search results widget, no public API) - WebSearch already reaches it. None of these four have a dedicated CLI yet — `/scrape` falls back to the WebSearch `site:` queries below for them.
 
 The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
 
@@ -14,8 +14,8 @@ The `site:` query templates in this file are the **WebSearch fallback** — for 
 
 Primary:
 - **linkedin.com/jobs** — also covered by the `linkedin-search` CLI
-- **builtin.com** — startup/tech-focused, no CLI yet (WebSearch fallback)
-- **trueup.io** — tech/startup job aggregator, no CLI yet (WebSearch fallback)
+- **builtin.com** — covered by the `builtin-search` CLI (USA/Canada/remote scope; see its SKILL.md for limits)
+- **trueup.io** — tech/startup job aggregator, no CLI yet (WebSearch fallback; harder than expected, see portal gap note above)
 - **indeed.com**, **glassdoor.com**, **google.com/jobs** — general boards, no CLI yet (WebSearch fallback)
 - **freehire.me** — covered by the `freehire-search` CLI
 
