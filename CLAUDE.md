@@ -23,6 +23,7 @@ Full detail lives in `.claude/skills/job-application-assistant/01-candidate-prof
 - **CV language:** English
 
 - **Status:** Actively building UseSaved (solo, 0-to-1 AI product) and supporting Zoodle in a fractional Product/GTM/Growth capacity. Targeting **full-time AI PM / Senior AI PM roles at tech startups** — treat "fractional" as current circumstance, not a stated preference; full-time is the goal. More senior scope (Director/VP) is welcome to surface but flagged, since it may be harder to defend in an interview.
+- **Work authorization:** Canadian Permanent Resident (confirmed 2026-09-18) — clears the Eligibility Gate for Canada-based/Canada-eligible roles without sponsorship. Does not cover US-only postings.
 - **LinkedIn headline:** [TO CONFIRM — not in source material, ask rather than invent]
 
 ### Education

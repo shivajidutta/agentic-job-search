@@ -12,6 +12,7 @@ framework_version: 1.1.1
 - **LinkedIn:** https://www.linkedin.com/in/shivajix/
 - **GitHub:** https://github.com/shivajidutta
 - **Status:** Actively building UseSaved (solo, 0-to-1 AI product) and supporting Zoodle in a fractional Product/GTM/Growth capacity. Targeting full-time AI PM / Senior AI PM roles at tech startups. "Fractional" reflects current circumstance, not a stated preference — full-time is the goal, remote ideal, hybrid acceptable.
+- **Work authorization:** Canadian Permanent Resident (confirmed 2026-09-18). This clears the Eligibility Gate in `04-job-evaluation.md` for Canada-based and Canada-eligible-remote roles without sponsorship. It does **not** confer US work authorization — a posting scoped to US-only (not "US or Canada") still needs its own eligibility check; do not assume PR covers it.
 - **Constraints:** Remote preferred, open to hybrid, no relocation
 
 ### Languages
