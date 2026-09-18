@@ -4,7 +4,12 @@
 
 `/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search`, `freehire-search`, and `builtin-search` (added 2026-09-18); Danish demos stay disabled (not targeting Denmark).
 
-**Portal gap (updated 2026-09-18):** Shivaji also wants trueup.io, indeed, handshake, glassdoor, and Google Jobs covered. `handshake.com` is a dead end (school-gated, no public listings). `indeed.com`/`glassdoor.com` allow crawling per robots.txt but have heavy bot-detection that likely needs a paid unlocker service - not built yet, pending a decision on whether that cost is worth it. `trueup.io` turned out to be a client-side-rendered app whose job-data API wasn't found after checking several JS bundles - needs more investigation or falls back to WebSearch. `google.com/jobs` isn't a real portal (a Search results widget, no public API) - WebSearch already reaches it. None of these four have a dedicated CLI yet — `/scrape` falls back to the WebSearch `site:` queries below for them.
+**Portal gap (confirmed 2026-09-18):** Shivaji also wants trueup.io, indeed, handshake, glassdoor, and Google Jobs covered. None of these get a dedicated CLI — `/scrape` falls back to the WebSearch `site:` queries below for all of them:
+- `handshake.com` — dead end, school-gated, no public listings to scrape.
+- `indeed.com` — test-fetched live: robots.txt permits it, but bot detection is active and inconsistent (1 of 4 plain requests succeeded, the rest got blocked, worsening with repeated attempts). Decided against building on this - a paid unlocker service would be needed for reliability, and the cost isn't worth it given LinkedIn/builtin.com/freehire already give coverage.
+- `glassdoor.com` — test-fetched live: hard 403 every time, even with full browser headers, landing on a JS security challenge page. Not scrapeable without a paid anti-bot bypass service. More useful to Shivaji as a company-research source (reviews, culture) than a listings source anyway - see `04-job-evaluation.md`'s Company Research Checklist.
+- `trueup.io` — client-side-rendered app; its job-data API wasn't found after checking several JS bundles. Left on WebSearch fallback; worth revisiting only if Shivaji finds the actual API URL via browser dev tools.
+- `google.com/jobs` — not a real portal, a Search results widget with no public API. WebSearch already reaches it indirectly.
 
 The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
 
