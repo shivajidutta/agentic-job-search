@@ -46,7 +46,7 @@ State how many jobs will be ranked and how many are deferred before proceeding.
 
 Dispatch parallel `general-purpose` agents via the **Agent tool**, ~5 jobs per agent (a single agent is fine for ≤5 jobs). Token-efficiency rules, consistent with `/apply`:
 
-- Pass each agent everything it needs **inline in the prompt** - the job list (title, company, URL) and a compact scoring rubric extracted from the files you read in Step 1: the strong/moderate/weak skill match areas, direct/adjacent experience domains, behavioral thrive/drain factors, career goals, deal-breakers, and the location constraints. Do **not** make agents re-read the profile files.
+- Pass each agent everything it needs **inline in the prompt** - the job list (title, company, URL) and a compact scoring rubric extracted from the files you read in Step 1: the strong/moderate/weak skill match areas, direct/adjacent experience domains, behavioral thrive/drain factors, career goals, deal-breakers, the location constraints, and - if the profile's Career Goals or Deal-breakers name a company-stage preference - the Company Stage Signal classification rule from `04-job-evaluation.md`. Do **not** make agents re-read the profile files.
 - Agents fetch each posting URL with WebFetch and score **only from actually fetched content**. If a URL is dead, redirects to a listing page, or the posting has expired, the agent marks that job `expired` - it never scores from the title alone and never fabricates posting content.
 - **Before marking anything `expired`, the agent must exhaust the escalation order** in `.claude/skills/job-application-assistant/09-web-research.md`: a `WebFetch` 403 is a rejected *client*, not a missing page, and retrying with browser headers via curl recovers most corporate and bank domains. A stored URL ending in a `#fragment` points at a listing page rather than a posting, so the agent should search the employer's own careers site for the role by name before writing the job off. Include this instruction in every scoring agent's prompt. `expired` means "retrieval genuinely failed after retrying", not "the first fetch was unhelpful".
 - Scope is triage: posting text vs. rubric. **No company research, no salary lookup, no web searches** - that depth belongs to `/apply`.
@@ -61,6 +61,7 @@ Each agent returns a JSON array, one object per job:
   "location_verdict": "PASS" | "FAIL" | "FLAG",
   "language_gate": "PASS" | "FAIL" | "FLAG",
   "language_note": "<posting requirement + declared level, only when FLAG or FAIL>",
+  "company_stage": "Startup" | "Growth" | "Enterprise" | "Unknown",
   "deadline": "YYYY-MM-DD" | null,
   "strengths": ["1-3 bullets, grounded in the posting text"],
   "gaps": ["1-3 bullets, honest"],
@@ -68,7 +69,7 @@ Each agent returns a JSON array, one object per job:
 }
 ```
 
-`language_gate`/`language_note` come from `04-job-evaluation.md`'s Language Gate — distinct from `language` above, which just records what language the posting is written in.
+`language_gate`/`language_note` come from `04-job-evaluation.md`'s Language Gate — distinct from `language` above, which just records what language the posting is written in. `company_stage` comes from that same file's Company Stage Signal - classify every job from the posting text (never guess from outside knowledge of the company), even when the profile states no stage preference, since a later profile edit shouldn't require re-scoring jobs just to backfill this field. Omit the key entirely only if the agent's rubric excerpt didn't include the Company Stage Signal rule (i.e. the profile has no stated preference at all).
 
 Scoring uses the dimension definitions from `04-job-evaluation.md` verbatim. The honesty rule applies to triage too: gaps are stated, never smoothed over, and a posting that is a poor fit gets a low score even if it looks prestigious.
 
@@ -82,6 +83,7 @@ Back in the main context, for each scored job:
 2. Map to the framework's verdict bands (Strong Fit 75+, Good Fit 60-74, Moderate Fit 45-59, Weak Fit 30-44, Poor Fit <30).
 3. **Location veto:** `FAIL` (e.g. requires relocation) excludes the job from the shortlist no matter the score - list it separately with the reason. `FLAG` (e.g. heavy travel) stays in the ranking but carries a visible ⚠ marker for the user to judge.
 4. **Language veto:** `language_gate: FAIL` (posting requires a language the candidate hasn't declared at all) excludes the job from the shortlist, same as a location FAIL - list it under "Excluded" with the quoted requirement from `language_note`. `language_gate: FLAG` (declared language, requirement reads above the declared level) stays in the ranking with a visible ⚠ marker and `language_note` shown alongside the score, same treatment as a location FLAG.
+4b. **Company Stage is never a veto.** `company_stage` (Startup/Growth/Enterprise/Unknown, from `04-job-evaluation.md`'s Company Stage Signal) never excludes a job, however strong the candidate's stated preference. It has already pulled Career Alignment and Behavioral Fit down (or up) during scoring per that section's rule - showing it again here is about visibility, not a second penalty. Show it as a plain label next to the job wherever it appears (shortlist, below threshold, excluded) - no ⚠ unless the posting's own language makes the stage genuinely ambiguous, and never omit it silently if the agent returned one.
 5. **Deadline urgency:** a deadline within 7 days gets a 🔥 marker and wins ties. A deadline that has already passed moves the job to `expired`. Take the deadline from the scoring agent's Step 2 JSON for a job scored in this run, and from the `deadline` Step 1's `candidates` already returned for one that already carries it - a stored value costs no fetch, so urgency is re-derived on every run without re-reading the posting. When both exist and disagree, the freshly scored value wins and replaces the stored one. A stored value that does not parse as `YYYY-MM-DD` is skipped for urgency as well - rule 6's defensive-parse rule applies wherever a stored deadline is compared.
 6. **Expiry sweep over already-ranked entries.** Before presenting, check the stored `deadline` of every `ranked` entry this run did not re-score:
 
@@ -121,7 +123,7 @@ python3 tools/rank_state.py apply --results "<path to that temporary file>"
 
 What it writes per entry - all additive to the scraper's schema:
 
-- Ranked jobs: `"status": "ranked"` plus `"rank_score": <overall>`, `"rank_verdict": "<band>"`, `"rank_date": "YYYY-MM-DD"`, `"location_verdict": "PASS"/"FAIL"/"FLAG"` (never the bare `location` key - that is the scraper's place field, e.g. "Aarhus, Denmark", and overwriting it with a verdict destroys the commute-filter data; an entry ranked before this rename may carry a legacy PASS/FAIL/FLAG string in `location`, which the tool reads as the verdict when `location_verdict` is absent and moves to `location_verdict` as it rewrites the entry), `"language_gate": "PASS"/"FAIL"/"FLAG"`, `"language_note"` (dropped when `language_gate` is `PASS`), `"deadline": "YYYY-MM-DD" | null` from the same Step 2 JSON (replacing the stored value when the agent returned a different one - a fresh fetch is the freshest source; left alone when the agent returned `null`, because absence is not a correction - a fetch that degraded to a listing page returns no deadline, and taking that as "the posting dropped its deadline" would erase a real date and, because rule 6 leaves an entry with no stored `deadline` alone, quietly make that job immortal to the sweep), plus `"strengths": [...]` and `"gaps": [...]` copied from the scoring agent's Step 2 JSON for that job. These veto fields are as important to persist as the score itself - without them, nothing later (a re-read of `seen_jobs.json`, a debugging session, the user asking "why was this excluded") can recover why a job did or didn't make the shortlist.
+- Ranked jobs: `"status": "ranked"` plus `"rank_score": <overall>`, `"rank_verdict": "<band>"`, `"rank_date": "YYYY-MM-DD"`, `"company_stage": "Startup"/"Growth"/"Enterprise"/"Unknown"` (written only when the scoring agent returned one; never guessed at by the tool, and never treated as a veto field - see `04-job-evaluation.md`), `"location_verdict": "PASS"/"FAIL"/"FLAG"` (never the bare `location` key - that is the scraper's place field, e.g. "Aarhus, Denmark", and overwriting it with a verdict destroys the commute-filter data; an entry ranked before this rename may carry a legacy PASS/FAIL/FLAG string in `location`, which the tool reads as the verdict when `location_verdict` is absent and moves to `location_verdict` as it rewrites the entry), `"language_gate": "PASS"/"FAIL"/"FLAG"`, `"language_note"` (dropped when `language_gate` is `PASS`), `"deadline": "YYYY-MM-DD" | null` from the same Step 2 JSON (replacing the stored value when the agent returned a different one - a fresh fetch is the freshest source; left alone when the agent returned `null`, because absence is not a correction - a fetch that degraded to a listing page returns no deadline, and taking that as "the posting dropped its deadline" would erase a real date and, because rule 6 leaves an entry with no stored `deadline` alone, quietly make that job immortal to the sweep), plus `"strengths": [...]` and `"gaps": [...]` copied from the scoring agent's Step 2 JSON for that job. These veto fields are as important to persist as the score itself - without them, nothing later (a re-read of `seen_jobs.json`, a debugging session, the user asking "why was this excluded") can recover why a job did or didn't make the shortlist.
 - Dead or past-deadline jobs: `"status": "expired"`.
 - Entries retired by Step 3's rule 6 sweep: `"status": "expired"` for those too, written by `sweep --write`, with every other field on them untouched. The sweep reasons over entries this run never scored, so without its own write its conclusion would live only in the report and the same expiry would be re-derived from the same stored date on every future run.
 
@@ -144,9 +146,9 @@ Swept <S> previously ranked entries (<E> newly expired, <C> closing soon).
 
 ### Shortlist
 
-| # | Score | Verdict | Title | Company | Location | Deadline | | URL |
-|---|-------|---------|-------|---------|----------|----------|---|-----|
-| 1 | 78 | Strong Fit | ... | ... | ... | ... | 🔥 | [Link](...) |
+| # | Score | Verdict | Title | Company | Stage | Location | Deadline | | URL |
+|---|-------|---------|-------|---------|-------|----------|----------|---|-----|
+| 1 | 78 | Strong Fit | ... | ... | Startup | ... | ... | 🔥 | [Link](...) |
 
 ### Why these ranked highest
 **1. <Title> at <Company> (78)** - [2-3 strength bullets and the honest gap, from the agent's findings]
@@ -158,7 +160,7 @@ Swept <S> previously ranked entries (<E> newly expired, <C> closing soon).
 | 2026-08-15 🔥 | ... | ... | [Link](...) |
 
 ### Below threshold
-| Score | Verdict | Title | Company | One-line reason | URL |
+| Score | Verdict | Stage | Title | Company | One-line reason | URL |
 
 ### Excluded
 - <Title> at <Company> - location FAIL: requires relocation - [Link](...)
@@ -169,6 +171,7 @@ Swept <S> previously ranked entries (<E> newly expired, <C> closing soon).
 Rules for the presentation:
 
 - Every table (shortlist, below threshold, excluded) includes the posting URL as a clickable link - use the `url` in `apply`'s output (not the entry's key, which for some portals is a company+title composite rather than the URL), so this never requires an extra lookup. Never drop the link for brevity.
+- Every table that shows `company_stage` also gets a "Stage" column when at least one job in it carries the field - omit the column entirely only if no job in that table has a stage (e.g. the profile has no stated preference, so agents never returned one). A job with no stage shows "Unknown" or an em dash, never a blank cell that reads as an oversight.
 - A shortlisted job with `language_gate: FLAG` gets a ⚠ marker next to its Title (same treatment as a location FLAG) and its `language_note` quoted in that job's "Why these ranked highest" writeup, so the language-level gap is visible without digging into the raw JSON.
 - Every claim traces to fetched posting text or the profile - no invented details.
 - Say explicitly that these are **triage scores from the posting text only**, and that `/apply` will re-evaluate with company research before anything is drafted.

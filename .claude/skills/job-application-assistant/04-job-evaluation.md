@@ -46,6 +46,23 @@ Judge the level comparison the same way you judge everything else in this framew
 
 **Worked example:** a candidate whose Languages table lists Spanish (Native) and English (B1/B2). A posting requiring "fluent Russian" → **FAIL**, Russian isn't declared at all. A posting requiring "fluent English" → **FLAG**, English is declared but "fluent" plausibly exceeds B1/B2 — score and draft the application, but tell the candidate this posting's bar may be a stretch and let them decide. A posting requiring "conversational English" or unspecified English → **PASS**, B1/B2 clears a "conversational" bar cleanly.
 
+## Company Stage Signal — informs scoring, never a veto
+
+If the candidate's Career Goals or Deal-breakers (below, under Career Alignment) name a company-stage preference — "startup," "avoid large enterprise," "growth-stage," "no Fortune 500," or similar, in either direction — classify each posting's likely employer stage from the posting text itself and let it inform scoring. Unlike the Eligibility and Language Gates above, this is never a hard exclusion: a well-matched enterprise role can still outscore a poorly-matched startup one. It exists to make a real preference visible and consistently applied, not to auto-reject a whole category of employer.
+
+**Classify from the posting text**, not from outside knowledge of the company:
+
+| Signal in the posting | Likely stage |
+|---|---|
+| Names a funding round/stage ("Series A/B," "seed," "VC-backed"), says "founding team," "employee #<N> where N is small," or describes building something from scratch | **Startup** |
+| Named team size in the dozens-to-low-hundreds, "scaling," "Series C+," a few years old with visible traction but not yet a household name | **Growth** |
+| "Fortune 500," a publicly traded ticker, a recognizable large/legacy brand, multi-thousand-employee language, heavy process/compliance framing ("change management," "governance council," multi-quarter rollout cadence) | **Enterprise** |
+| None of the above are legible from the posting | **Unknown** — do not guess; score without this signal and say so |
+
+**How it feeds scoring:** when the candidate's stated preference and the posting's classified stage are in tension (e.g. candidate wants startups, posting reads Enterprise), that tension is real signal for **Career Alignment** (does this advance the stated career direction?) and **Behavioral/Culture Fit** (large-org process and pace vs. the candidate's stated thrive/drain factors) — let it pull those two scores down accordingly, same as any other honest mismatch already would. It is not a separate weighted dimension and never overrides the Eligibility or Language Gates.
+
+**Always surface it as a visible flag** next to the job (e.g. "Enterprise ⚠" or "Startup") wherever the job appears in a ranked list or shortlist, the same way a location or language FLAG is shown — never bury it only inside a blended score the candidate has to reverse-engineer.
+
 ## Scoring Dimensions
 
 Evaluate each job posting against these five dimensions:
