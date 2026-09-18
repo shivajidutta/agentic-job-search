@@ -42,10 +42,10 @@ Full 13-role history (1998-present) is in `01-candidate-profile.md`. Most recent
 - **Director - Marketing** (Apr 2021 - Sep 2022) - **ALM Corp** (Remote, Toronto)
 
 ### Technical Skills
-- **Primary:** 0-to-1 product strategy, GTM strategy, growth strategy, AI-assisted product development (built and shipped UseSaved solo using AI-assisted coding workflows)
+- **Primary:** 0-to-1 product strategy, GTM strategy, growth strategy, hands-on AI product development (built and shipped UseSaved solo: RAG/hybrid retrieval, LLM integration, prompt engineering, AI evaluation, prompt-injection red-teaming — confirmed 2026-09-18)
 - **Secondary:** Brand/narrative positioning, CX design, cross-functional team leadership and scaling, investor/stakeholder storytelling
 - **Domain:** Consumer tech, SaaS, marketplace platforms; non-traditional path via physical experience design into digital product
-- **Software:** None tracked by default. Only add a specific tool if a posting explicitly requires it, and confirm the claim with Shivaji before including it — never infer or invent one.
+- **Software:** Claude API (Haiku), OpenAI API, Supabase (Postgres + vector search), Chrome extension development — confirmed via UseSaved. Only add another specific tool if a posting explicitly requires it, and confirm the claim with Shivaji first — never infer or invent one.
 
 ### Certifications
 - Introduction to User Experience Design - Coursera / Georgia Institute of Technology (2018)

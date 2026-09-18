@@ -60,7 +60,7 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** 0-to-1 product strategy, GTM strategy, growth strategy, AI-assisted product development (shipped UseSaved solo)
+**Strong match areas:** 0-to-1 product strategy, GTM strategy, growth strategy, hands-on AI product development (shipped UseSaved solo — RAG/hybrid retrieval, LLM integration, prompt engineering, AI evaluation, prompt-injection red-teaming; confirmed 2026-09-18)
 **Moderate match areas:** Brand/narrative positioning, CX design, cross-functional team leadership and scaling
 **Weak match areas:** No static list by design (confirmed 2026-09-18) — score each posting honestly against what it specifically requires rather than against a pre-set gap list.
 

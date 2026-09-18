@@ -40,8 +40,17 @@ over 05-cv-templates.md's general ATS date-completeness guidance for education e
 
 ### Founder-Builder - UseSaved (Jun 2026 - Present)
 Remote, Toronto, Canada
+<!-- Technical specifics confirmed by Shivaji 2026-09-18, sourced from his own research doc (not
+independently verified beyond his confirmation - treat as source material the same as the CV). -->
 - Building UseSaved, an AI-native save-and-find product: save any URL, then retrieve it later by describing it in natural language, with AI handling enrichment, tagging, and vectorization in the background. Live as a Chrome extension in early rollout.
-- Own the product end-to-end: problem validation, product strategy and roadmap, AI processing pipeline, UX, and GTM; shipped using AI-assisted development workflows.
+- Own the product end-to-end: problem validation, product strategy and roadmap, AI processing pipeline, UX, and GTM; shipped using AI-assisted development workflows. Went from concept to a live Chrome extension in weeks, solo.
+- Architecture: Chrome extension -> Claude (Haiku) + OpenAI for processing -> Supabase (Postgres) for storage and vector search. Hybrid RAG plus keyword retrieval, not RAG alone.
+- Built and ran an evaluation methodology for the tagging pipeline: a golden test set scoring 91/100 on tag-consistency; structured/schema-constrained outputs for reliable downstream processing.
+- Ran prompt-injection red-teaming and built in guardrails before shipping to real users.
+- Validated the core save-and-find flow through five-user validation sprints before wider rollout.
+- Owns unit economics directly: ~$0.0015 per search, with credits tuned to control API spend.
+- Privacy-by-design: no raw content stored, encrypted vectors.
+- Planned next: an observability layer (Azure AI Foundry) for monitoring model behavior in production - not yet built, on the roadmap.
 - Onboarded first users ahead of public launch; early user feedback highlights an intuitive save-and-find flow.
 
 ### Fractional Leader - Product, GTM & Growth - Zoodle (Jan 2025 - Present)
@@ -120,7 +129,7 @@ None identified in source material yet — Shivaji is currently building UseSave
 ## Technical Skills
 
 ### Primary
-0-to-1 product strategy, GTM strategy, growth strategy, AI-assisted product development (built and shipped UseSaved solo using AI-assisted coding workflows)
+0-to-1 product strategy, GTM strategy, growth strategy, hands-on AI product development (built and shipped UseSaved solo: RAG/hybrid retrieval, LLM integration, prompt engineering, AI evaluation, prompt-injection red-teaming — see UseSaved bullets above, confirmed by Shivaji 2026-09-18)
 
 ### Secondary
 Brand/narrative positioning, CX design, cross-functional team leadership and scaling, investor/stakeholder storytelling
@@ -130,7 +139,7 @@ Brand/narrative positioning, CX design, cross-functional team leadership and sca
 - Non-traditional path bridging physical experience design (large-format events, exhibitions) into digital product and growth
 
 ### Software & Tools
-None tracked by default. Add a specific tool only if a posting explicitly requires it, and confirm the claim with Shivaji before including it — never infer or invent one.
+Confirmed via UseSaved (2026-09-18): Claude API (Haiku), OpenAI API, Supabase (Postgres + vector search), Chrome extension development. For any other tool a posting asks about, do not assume — confirm with Shivaji before including it.
 
 ## Publications
 None on record.

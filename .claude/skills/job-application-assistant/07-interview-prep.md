@@ -85,6 +85,26 @@ interview. -->
 - Action:
 - Result:
 
+### Building UseSaved's AI pipeline solo (skill: hands-on AI product execution)
+**Source:** Confirmed by Shivaji 2026-09-18 (his own research doc, corroborated as accurate)
+**What happened:** Designed and shipped UseSaved's hybrid RAG + keyword retrieval architecture solo (Chrome extension -> Claude Haiku + OpenAI -> Supabase), built an evaluation methodology scoring 91/100 on tag-consistency, ran prompt-injection red-teaming before launch, and validated the core flow through five-user sprints — concept to live extension in weeks.
+**Why it matters:** Questions asking for concrete proof of hands-on AI/LLM work, not just AI PM vocabulary — evals, guardrails, and red-teaming specifically
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### The EZLynx interview — AI adoption as the hardest problem (skill: change management, stakeholder communication)
+**Source:** Confirmed by Shivaji 2026-09-18
+**What happened:** In an interview for a Senior AI Product Manager role at EZLynx (contact: Keyuri), discussed a four-dimension human-in-the-loop framework (error cost, reversibility, judgment, review efficiency) for deciding when an AI agent should act autonomously versus require approval — directly addressing the interviewer's stated hardest problem, driving AI adoption among skeptical users.
+**Why it matters:** Questions about designing trust into an AI feature, handling user skepticism, or a specific example of translating an AI capability into something non-technical stakeholders would actually adopt
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ### Scaling delivery under growth pressure (skill: operational scaling, metrics-driven)
 **Source:** CV (Applied Systems) and SHIVAJI-CONTEXT.md career metrics table
 **What happened:** At ALM Corp, grew managed projects from ~200 to 300+ within 15 months and led a 60+ person cross-functional team, while improving on-time delivery and marketing KPIs. Similarly at Zoodle, GTM strategy drove 8,000+ user acquisitions (4x the 2,000 target).
