@@ -293,6 +293,14 @@ def cmd_apply(args) -> int:
             entry.pop("language_note", None)
         else:
             entry["language_note"] = result.get("language_note")
+        # Company Stage Signal (04-job-evaluation.md): informational only, never
+        # a veto - "Unknown" is a legitimate classification, not an error, so it
+        # is stored as-is rather than defaulted away like the gates above.
+        stage = result.get("company_stage")
+        if stage:
+            entry["company_stage"] = stage
+        else:
+            entry.pop("company_stage", None)
         # Absence is not a correction: a fetch that degraded to a listing page
         # returns no deadline, and blanking a stored one would erase a real
         # date and make the entry immortal to rule 6's sweep.
@@ -316,6 +324,7 @@ def cmd_apply(args) -> int:
                 "location_verdict": entry["location_verdict"],
                 "language_gate": entry["language_gate"],
                 "language_note": entry.get("language_note"),
+                "company_stage": entry.get("company_stage"),
                 "deadline": entry.get("deadline"),
                 "posted_date": entry.get("posted_date"),
                 "urgent": bool(parsed and today <= parsed <= today + timedelta(days=URGENT_DAYS)),
