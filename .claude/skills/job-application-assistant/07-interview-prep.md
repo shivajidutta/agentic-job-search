@@ -97,7 +97,7 @@ interview. -->
 
 ### The EZLynx interview — AI adoption as the hardest problem (skill: change management, stakeholder communication)
 **Source:** Confirmed by Shivaji 2026-09-18
-**What happened:** In an interview for a Senior AI Product Manager role at EZLynx (contact: Keyuri), discussed a four-dimension human-in-the-loop framework (error cost, reversibility, judgment, review efficiency) for deciding when an AI agent should act autonomously versus require approval — directly addressing the interviewer's stated hardest problem, driving AI adoption among skeptical users.
+**What happened:** In an interview for a Senior AI Product Manager role at EZLynx, discussed a four-dimension human-in-the-loop framework (error cost, reversibility, judgment, review efficiency) for deciding when an AI agent should act autonomously versus require approval — directly addressing the interviewer's stated hardest problem, driving AI adoption among skeptical users.
 **Why it matters:** Questions about designing trust into an AI feature, handling user skepticism, or a specific example of translating an AI capability into something non-technical stakeholders would actually adopt
 **S/T/A/R stub:**
 - Situation:
